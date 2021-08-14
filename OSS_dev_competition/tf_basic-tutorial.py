@@ -6,8 +6,8 @@ xData = [1, 2, 3, 4, 5, 6, 7]
 yData = [25000, 55000, 75000, 110000, 128000, 155000, 180000]
 
 #W는 Weight(가중치). -100에서 100사이의 랜덤값  b는 bias y절편
-W = tf.Variable(tf.random_uniform([1], -100, 100))
-b = tf.Variable(tf.random_uniform([1], -100, 100))
+W = tf.Variable(tf.random_uniform([1], -100, 100, dtype=tf.float64, seed=0))
+b = tf.Variable(tf.random_uniform([1], -100, 100, dtype=tf.float64, seed=0))
 
 #placeholder라는 하나의 틀
 X = tf.placeholder(tf.float32)
