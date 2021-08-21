@@ -26,8 +26,11 @@ hypothesis = x1 * w1 + x2 * w2 + x3 * w3 + b
 
 cost = tf.reduce_mean(tf.square(hypothesis - Y)) 
 #추정한 값(Hypothesis)와 실제값(y)의 차이를 제곱하여 수식을 만드는 부분
+
 optimizer = tf.train.GradientDescentOptimizer(learning_rate=1e-5)
 train = optimizer.minimize(cost)
+#Cost(비용)을 아래로 볼록한 2차함수로 만들고, 미분했을때 0인 지점의 W와 b값이 이상적인 결과
+#이 과정을 텐서플로우가 함수형식으로 만들어서 그냥 제공해주는 부분
 
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
