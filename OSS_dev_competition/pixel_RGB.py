@@ -8,9 +8,9 @@ r_list = []
 g_list = []
 b_list = []
 
-r_list = [0]*10
-g_list = [0]*10
-b_list = [0]*10
+r_list = [0]*8
+g_list = [0]*8
+b_list = [0]*8
 
 r_list[0], g_list[0], b_list[0] = rgb_im.getpixel((4, 11))
 r_list[1], g_list[1], b_list[1] = rgb_im.getpixel((16, 17))
