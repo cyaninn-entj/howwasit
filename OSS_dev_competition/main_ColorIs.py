@@ -1,9 +1,12 @@
+from typing_extensions import Annotated
 import numpy as np
 import pandas as pd
 from PIL import Image
 import glob
 import re
 import os
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 ls = glob.glob('data/top/*.jpg')
 #디렉토리 리스트로 가져오기
@@ -79,11 +82,43 @@ for i, path in enumerate(ls) :
     Y_data[i] = Y_color_num
     #일련번호를 데이터 리스트에 저장
 
+x1 = tf.placeholder(tf.float32)
+x2 = tf.placeholder(tf.float32)
+x3 = tf.placeholder(tf.float32)
+Y = tf.placeholder(tf.float32)
+#placeholder로 저장
+
+w1 = tf.Variable(tf.random_normal([1]), name = 'weight1')
+w2 = tf.Variable(tf.random_normal([1]), name = 'weight2')
+w3 = tf.Variable(tf.random_normal([1]), name = 'weight3')
+b = tf.Variable(tf.random_normal([1]),name = 'bias')
+#구하려는 국어,수학,영어 점수
+
+hypothesis = x1 * w1 + x2 * w2 + x3 * w3 + b
+#Hypothesis(y추정값) = w1*x1 + w2*x2 + w3*x3 + b
+
+cost = tf.reduce_mean(tf.square(hypothesis - Y)) 
+#추정한 값(Hypothesis)와 실제값(y)의 차이를 제곱하여 수식을 만드는 부분
+
+optimizer = tf.train.GradientDescentOptimizer(learning_rate=1e-5)
+train = optimizer.minimize(cost)
+#Cost(비용)을 아래로 볼록한 2차함수로 만들고, 미분했을때 0인 지점의 W와 b값이 이상적인 결과
+#이 과정을 텐서플로우가 함수형식으로 만들어서 그냥 제공해주는 부분
+
+sess = tf.Session()
+sess.run(tf.global_variables_initializer())
+for step in range(10001) : 
+    cost_val, hy_val, _ = sess.run([cost, hypothesis, train],
+    feed_dict = { x1 : x1_data_R, x2 : x2_data_G, x3 : x3_data_B, Y : Y_data})
+    if step % 2000 == 0 :
+        print(step, "Cost : ",cost_val,"\nPrediction:\n",hy_val, 
+        "\nWeight,bias :\n",sess.run(w1),sess.run(w2),sess.run(w3),sess.run(b))
+        print("==============")
 
 
-print("x1data_0: "+str(x1_data_R[0])+" x2data_0: "+str(x2_data_G[0])+" x3data_0 :"+str(x3_data_B[0])+" Y_data_0 :"+str(Y_data[0]))
-print("x1 data len: "+ str(len(x1_data_R)))
-print("x2 data len: "+ str(len(x2_data_G)))
-print("x3 data len: "+ str(len(x3_data_B)))
-print("y data len: "+ str(len(Y_data)))
-#print('R:'+ str(r_AVG) + ' G:' + str(g_AVG) + ' B:' + str(b_AVG))
+w1_result = sess.run(w1)
+w2_result = sess.run(w2)
+w3_result = sess.run(w3)
+b_result = sess.run(b)
+answer = int(csv.loc[0,"R"]) * w1_result + int(csv.loc[0,"G"]) * w2_result + int(csv.loc[0,"B"]) * w3_result + b_result
+print(int(answer))
