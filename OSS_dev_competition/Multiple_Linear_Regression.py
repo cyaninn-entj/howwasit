@@ -41,3 +41,10 @@ for step in range(2001) :
     if step % 1000 == 0 :
         print(step, "Cost : ",cost_val,"\nPrediction:\n",hy_val, 
         "\nWeight,bias :\n",sess.run(w1),sess.run(w2),sess.run(w3),sess.run(b))
+   
+w1_result = sess.run(w1)
+w2_result = sess.run(w2)
+w3_result = sess.run(w3)
+b_result = sess.run(b)
+answer = 95 * w1_result + 99 * w2_result + 100 * w3_result + b_result
+print(int(answer))
