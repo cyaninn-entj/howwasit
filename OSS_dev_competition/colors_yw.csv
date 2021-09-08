@@ -1,0 +1,47 @@
+white,White,#ffffff,255,255,255,1,27
+silver,Silver,#c0c0c0,192,192,192,2,21
+light gray,Light gray,#d3d3d3,211,211,211,3,23
+gray,Gray,#808080,128,128,128,4,15
+dark gray,Dark gray,#4f4f4f,79,79,79,5,10
+black,Black,#101010,16,16,16,6,4
+deep red,Deep red,#8b1010,139,16,16,7,24
+red,Red,#ff0000,255,0,0,8,43
+pink,Pink,#ff9900,255,0,160,9,6
+light pink,Light pink,#nnnnnn,255,157,181,10,36
+pale pink,Pale pink,#nnnnnn,232,163,153,11,28
+peach,Peach,#nnnnnn,255,167,135,12,29
+coral,Coral,#nnnnnn,255,93,81,13,36
+light orange,Light orange,#nnnnnn,255,114,0,14,22
+neon orange,Neon orange,#nnnnnn,255,75,0,15,29
+orange pink,Orange pink,#nnnnnn,251,55,80,16,42
+orange,Orange,#nnnnnn,255,40,0,17,35
+ivory,Ivory,#eee6c4,238,230,196,18,22
+light yellow,Light yellow,#nnnnnn,255,225,107,19,15
+yellow,Yellow,#nnnnnn,254,245,0,20,6
+mustard,Mustard,#nnnnnn,252,177,0,21,10
+gold,Gold,#ffd700,255,210,0,22,5
+neon green,Neon green,#nnnnnn,205,239,0,23,6
+light green,Light green,#nnnnnn,117,201,0,24,6
+mint,Mint,#nnnnnn,0,196,171,25,6
+green,Green,#nnnnnn,0,128,0,26,6
+olive green,Olive green,#nnnnnn,128,128,0,27,1
+khaki,Khaki,#nnnnnn,161,140,117,28,16
+dark green,Dark green,#nnnnnn,0,100,0,29,6
+sky blue,Sky blue,#nnnnnn,0,195,235,30,6
+neon blue,Neon blue,#nnnnnn,1,130,246,31,9
+blue,Blue,#nnnnnn,37,8,255,32,38
+navy,Navy,#nnnnnn,0,30,102,33,10
+wine,Wine,#nnnnnn,139,0,78,34,34
+lavender,Lavender,#nnnnnn,176,119,207,35,33
+purple,Purple,#nnnnnn,128,0,128,36,38
+burgundy,Burgundy,#nnnnnn,144,0,32,37,29
+brown,Brown,#nnnnnn,150,75,0,38,13
+red brown,Red brown,#nnnnnn,208,67,0,39,23
+khaki beige,Khaki beige,#nnnnnn,170,114,0,40,9
+camel,Camel,#nnnnnn,228,151,0,41,11
+sand,Sand,#nnnnnn,206,179,144,42,20
+beige,Beige,#nnnnnn,241,194,118,43,20
+denim,Denim,#nnnnnn,0,8,73,44,10
+light cheong,Light Cheong,#nnnnnn,174,198,220,45,21
+middle cheong,Middle Cheong,#nnnnnn,157,176,199,46,19
+black cheong,Black Cheong,#nnnnnn,46,52,73,47,9
