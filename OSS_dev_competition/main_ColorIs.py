@@ -120,5 +120,8 @@ w1_result = sess.run(w1)
 w2_result = sess.run(w2)
 w3_result = sess.run(w3)
 b_result = sess.run(b)
-answer = int(csv.loc[0,"R"]) * w1_result + int(csv.loc[0,"G"]) * w2_result + int(csv.loc[0,"B"]) * w3_result + b_result
-print(int(answer))
+for k in range(len(csv)):
+    answer = int(csv.loc[k,"R"]) * w1_result + int(csv.loc[k,"G"]) * w2_result + int(csv.loc[k,"B"]) * w3_result + b_result
+    print("입력상의 색: "+str(csv.loc[k,"number"]))
+    print("하의 색 : "+str(answer))
+    print("============")
