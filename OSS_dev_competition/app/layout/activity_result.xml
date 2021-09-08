@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".result_Activity">
+
+    <TextView
+        android:id="@+id/text_dis"
+        android:layout_width="382dp"
+        android:layout_height="55dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/edge"
+        android:text="60장의 사진을 30,000번 학습시킨\n머신러닝 추천 하의 컬러"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="188dp"
+        android:layout_height="185dp"
+        android:gravity="center"
+        android:background="@drawable/edge"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_dis"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/text_link"
+        android:layout_width="339dp"
+        android:layout_height="252dp"
+        android:gravity="center"
+        android:background="@drawable/edge"
+        android:text="결과 값 색상의 하의를 판매하는\n쇼핑몰 피팅모델 사진과 하이퍼링크 공간"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_result" />
+</androidx.constraintlayout.widget.ConstraintLayout>
