@@ -35,4 +35,12 @@ pip3로 pyupbit 설치: pip3 install pyupbit
 실행되고 있는지 확인: ps ax | grep .py
 프로세스 종료(PID는 ps ax | grep .py를 했을때 확인 가능): kill -9 PID
 '''
+
+
+'''
+$ alias cdAT='cd /home/ubuntu/howwasit/howwasit' #디렉토리 이동
+$ alias runAT='nohup python3 autotrade_XRP.py > output.log &' #백그라운드실행
+$ alias ckAT='ps ax | grep .py' #실행되는 .py 프로세스 확인
+'''
+
     
